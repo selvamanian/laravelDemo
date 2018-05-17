@@ -64,25 +64,14 @@ input{
 				
 				<div class="form-group m-t-40">
 				<label for="email">User Name</label>
-				<!-- <input type="email" class="form-control" id="email"> -->
 				{{ Form::text('username', '',array('placeholder' => 'User name', 'class' => 'form-control','data-parsley-required-message'=>'User name is required.','required'=>true)) }}
 				</div>
 				{{ Form::submit('Submit',array('class' => 'btn btn-default br-0')) }}
 				
-				<!-- <button type="submit" class="btn btn-default">Submit</button> -->
 				@if($code!=1) <p>{{$message}}</p> @endif
 		</div>
 	</div>
-	<!-- <p>
-	    {{ $errors->first('username') }}
-	</p>
 
-	<p>
-	    {{ Form::label('username', 'User name') }}
-	    {{ Form::text('username', '',array('placeholder' => 'User name')) }}
-	</p>
- -->
-	<!-- <p>{{ Form::submit('Submit') }}</p> -->
 	{{ Form::close() }}
 	
 	</div>
